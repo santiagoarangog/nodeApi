@@ -1,5 +1,5 @@
 const express = require("express")
-const {getItems, getItem} = require("../controllers/tracks");
+const {getItems, getItem, createItem} = require("../controllers/tracks");
 
 /***
  * @description Creamos nuestra ruta de tracks
@@ -8,6 +8,8 @@ const {getItems, getItem} = require("../controllers/tracks");
 const router = express.Router();
 
 router.get("/", getItems)
+
+router.post("/", createItem)
 
 
 module.exports = router;
